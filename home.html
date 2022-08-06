@@ -8,13 +8,12 @@
 </head>
 <body>
     <h2>Iniciando las pruebas del código</h2>
-    <input type="text">
+    <input type="text" value="Encripta" id="Aencriptar">
     <button onclick="scrambler()">Encriptar</button>
     <button onclick="desEncrypt()">DesEncriptar</button>
     <br>
     <button onclick="copiar()">Copiar</button>
-    <input type="text">
-
+    <input type="text" value="Resultado" id="TextoSalida">
 
     <script>
             function imprimir(frase){
@@ -26,27 +25,28 @@
             document.write("<br>");
         }
         
-        var frase = document.querySelector("input")
-        var scramButton = document.querySelector("button")
+        var introducido = document.getElementById("Aencriptar");
 
-        frase.focus();
+        introducido.focus();
         scramButton.onclick = scrambler;
         desButton.onclick = desEncrypt;
 
         function scrambler(){
-            alert("Encriptando");
-            frase.focus();
-
+            alert(introducido.value);
+            introducido.focus();
+            
         }
 
         function desEncrypt(){
             alert("Desencriptando");
-            frase.focus();
+            introducido.focus();
 
         }
+
         function copiar(){
-            alert("Texto Copiado")
-            frase.focus();
+            var textoCopiado = document.getElementById("TextoSalida")
+            navigator.clipboard.writeText(textoCopiado.value);
+            alert("Texto copiado: " + textoCopiado.value);
 
         }
 
