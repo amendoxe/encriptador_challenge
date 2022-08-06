@@ -7,6 +7,51 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Iniciando las pruebas del código</h2>
+    <input type="text">
+    <button onclick="scrambler()">Encriptar</button>
+    <button onclick="desEncrypt()">DesEncriptar</button>
+    <br>
+    <button onclick="copiar()">Copiar</button>
+    <input type="text">
+
+
+    <script>
+            function imprimir(frase){
+            document.write(frase);
+            breakLine();
+        }
+
+        function breakLine(){
+            document.write("<br>");
+        }
+        
+        var frase = document.querySelector("input")
+        var scramButton = document.querySelector("button")
+
+        frase.focus();
+        scramButton.onclick = scrambler;
+        desButton.onclick = desEncrypt;
+
+        function scrambler(){
+            alert("Encriptando");
+            frase.focus();
+
+        }
+
+        function desEncrypt(){
+            alert("Desencriptando");
+            frase.focus();
+
+        }
+        function copiar(){
+            alert("Texto Copiado")
+            frase.focus();
+
+        }
+
+    </script>
 </body>
 </html>
+
+
