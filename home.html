@@ -8,12 +8,13 @@
 </head>
 <body>
     <h2>Iniciando las pruebas del código</h2>
-    <input type="text" value="Encripta" id="Aencriptar">
+    <input type="text" value="Encripta" id="inputA">
     <button onclick="scrambler()">Encriptar</button>
     <button onclick="desEncrypt()">DesEncriptar</button>
     <br>
     <button onclick="copiar()">Copiar</button>
-    <input type="text" value="Resultado" id="TextoSalida">
+    <h3 class="resTextHTML" id="resultado"> </h3>
+    <h3 id="resultado2" ></h3>
 
     <script>
             function imprimir(frase){
@@ -25,28 +26,51 @@
             document.write("<br>");
         }
         
-        var introducido = document.getElementById("Aencriptar");
+        var introducido = '';
 
-        introducido.focus();
-        scramButton.onclick = scrambler;
-        desButton.onclick = desEncrypt;
 
+        
+
+
+        var scramMessage;
         function scrambler(){
-            alert(introducido.value);
+            introducido = document.getElementById("inputA").value;
+            console.log(introducido)
+            //Replacing
+            introducido.replaceAll('i', 'imes')
+            var transformado = introducido.replaceAll('e','enter').replaceAll('i', 'imes').replaceAll('a','ai').replaceAll('o','ober').replaceAll('u','ufat')
+
+            scramMessage  = transformado
+            console.log(scramMessage)
+            document.getElementById("resultado").innerHTML = scramMessage
             introducido.focus();
+            introducido.value= "";
             
         }
 
         function desEncrypt(){
+
+            introducido = document.getElementById("inputA").value;
+            var transformado = introducido.replaceAll('enter','e').replaceAll('imes', 'i').replaceAll('ai','a').replaceAll('ober','o').replaceAll('ufat','u')
+
+            scramMessage  = transformado
+            document.getElementById("resultado").innerHTML = scramMessage
             alert("Desencriptando");
             introducido.focus();
 
         }
 
         function copiar(){
-            var textoCopiado = document.getElementById("TextoSalida")
-            navigator.clipboard.writeText(textoCopiado.value);
-            alert("Texto copiado: " + textoCopiado.value);
+            var textoCopiado = scramMessage
+            
+            
+            console.log(textoCopiado)
+            navigator.clipboard.writeText(textoCopiado);
+
+            alert("Texto copiado: " + textoCopiado);
+            document.getElementById("inputA").value = "";
+            document.getElementById("inputA").value.focus();
+
 
         }
 
