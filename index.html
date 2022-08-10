@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1 class="tituloPrincipal">Alura ONE</h1>
+</header>
+<body id="body">
+    <!-- BUG hacer que salte línea -->
+    <div class="iputForm">
+        <!-- [ ] input text or text area -->
+        <!-- <input type="text" value="" id="inputA" class="inputTexto" autofocus placeholder="Ingresa el texto aqui"> -->
+
+        <textarea name="" id="inputA" cols="30" rows="10"class="inputTexto" autofocus placeholder="Ingresa el texto aqui"></textarea>
+
+        <p class="importante"><script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/hvnymaak.json"
+                trigger="hover"
+                colors="primary:#67808e"
+                style="width:32px;height:32px">
+            </lord-icon>Sólo letras minúsculas y sin acentos</p>
+        <button onclick="scrambler()" class="botonesInput">Encriptar</button>
+        <button onclick="desEncrypt()" class="botonesInput">DesEncriptar</button>
+
+    </div>
+    <!-- TODO make float right -->
+    <div class="outputForm">
+        <h3 class="resTextHTML" id="resultado"> </h3>
+        <textarea name="" id="resultado" cols="30" rows="10" class="outputTexto"></textarea>
+        <!-- TODO imagen aparezca antes que el texto -->
+        <img src="" alt="">
+        <button onclick="copiar()" class="botonesOutput">Copiar</button> 
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+@font-face {
+    font-family: Inter-Regular;
+    src: url(fonts/Inter-Regular.woff);
+}
+#body{
+    background-color: #D8DFE8;
+    font-family: Inter-Regular;
+}
+.iputForm{
+    color: darkblue;
+    display:inline-block;
+    width: 47%;
+    padding: 1px;
+    padding-left: 15%;
+}
+.inputTexto{
+    color: darkblue;
+    font-size: 32px;
+    background-color: transparent;
+    border-style: hidden;
+    outline: none;
+    font-family: Inter-Regular;
+    width: 84%;
+    /* padding-left: 35%; */
+    text-align: center;
+
+}
+.botonesInput{
+    width: 48%;
+    margin-left: 1%;
+    
+}
+.importante{
+    color:#67808E;
+}
+.outputForm{
+    background-color: aliceblue;
+    width: 27%;
+    height: 92%;
+    display: inline-block;
+    float:inherit;
+    margin: 2.7%;
+    border-radius: 8px;
+    vertical-align: top;
+
+}
+.outputTexto{
+    color: darkblue;
+    font-size: 32px;
+    background-color: transparent;
+    border-style: hidden;
+    outline: none;
+    font-family: Inter-Regular;
+    width: 84%;
+
+    /* padding-left: 35%; */
+    text-align: center;
+}
+
+.botonesOutput{
+    width: 80%;
+    align-self: center;
+    margin-left: 10%;
+    
+}
