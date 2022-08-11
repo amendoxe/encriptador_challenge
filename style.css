@@ -2,6 +2,13 @@
     font-family: Inter-Regular;
     src: url(fonts/Inter-Regular.woff);
 }
+#logos{
+    width: 150px;
+    /* float:inline-start; */
+    position: relative;
+    top: -30px; 
+    margin-bottom: -30px;
+}
 #body{
     background-color: #D8DFE8;
     font-family: Inter-Regular;
