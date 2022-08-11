@@ -10,8 +10,12 @@
     color: darkblue;
     display:inline-block;
     width: 47%;
-    padding: 1px;
+    height: 92%;
     padding-left: 15%;
+    position: static;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 10px;
 }
 .inputTexto{
     color: darkblue;
@@ -19,15 +23,30 @@
     background-color: transparent;
     border-style: hidden;
     outline: none;
-    font-family: Inter-Regular;
     width: 84%;
     /* padding-left: 35%; */
     text-align: center;
+    resize: none;
 
+}
+.botones{
+    background-color: #D8DFE8;
+    color: darkblue;
+    border: 1px solid darkblue;
+    transition-duration: 0.2s;
+
+}
+.botones:hover {
+background-color: darkblue;
+color: white;
 }
 .botonesInput{
     width: 48%;
     margin-left: 1%;
+    padding: .7% 1%;
+    border-radius: 9px;
+    font-size: 16px;
+    overflow: hidden;
     
 }
 .importante{
@@ -35,13 +54,17 @@
 }
 .outputForm{
     background-color: aliceblue;
-    width: 27%;
-    height: 92%;
+    width: 300px;
+    height: 100%;
     display: inline-block;
-    float:inherit;
+    float:inline-end;
     margin: 2.7%;
-    border-radius: 8px;
+    margin-top: 0%;
+    border-radius: 15px;
     vertical-align: top;
+    text-align: center;
+    
+    
 
 }
 .outputTexto{
@@ -51,15 +74,18 @@
     border-style: hidden;
     outline: none;
     font-family: Inter-Regular;
-    width: 84%;
+    width: 300px;
+    resize: none;
+    text-align: center;
 
     /* padding-left: 35%; */
-    text-align: center;
+ 
 }
 
 .botonesOutput{
-    width: 80%;
-    align-self: center;
-    margin-left: 10%;
-    
+    width: 300px;
+    padding: 2% 8%;
+    font-family: Inter-Regular;
+    border-radius: 9px;    
+
 }

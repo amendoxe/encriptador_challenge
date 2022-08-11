@@ -11,9 +11,7 @@
     <h1 class="tituloPrincipal">Alura ONE</h1>
 </header>
 <body id="body">
-    <!-- BUG hacer que salte línea -->
     <div class="iputForm">
-        <!-- [ ] input text or text area -->
         <!-- <input type="text" value="" id="inputA" class="inputTexto" autofocus placeholder="Ingresa el texto aqui"> -->
 
         <textarea name="" id="inputA" cols="30" rows="10"class="inputTexto" autofocus placeholder="Ingresa el texto aqui"></textarea>
@@ -25,18 +23,81 @@
                 colors="primary:#67808e"
                 style="width:32px;height:32px">
             </lord-icon>Sólo letras minúsculas y sin acentos</p>
-        <button onclick="scrambler()" class="botonesInput">Encriptar</button>
-        <button onclick="desEncrypt()" class="botonesInput">DesEncriptar</button>
+
+        <button onclick="scrambler()"  class="botones botonesInput">Encriptar</button>
+        <button onclick="desEncrypt()" class="botones botonesInput">DesEncriptar</button>
 
     </div>
-    <!-- TODO make float right -->
     <div class="outputForm">
         <h3 class="resTextHTML" id="resultado"> </h3>
-        <textarea name="" id="resultado" cols="30" rows="10" class="outputTexto"></textarea>
-        <!-- TODO imagen aparezca antes que el texto -->
-        <img src="" alt="">
-        <button onclick="copiar()" class="botonesOutput">Copiar</button> 
+        <h3 id="paraBorrar">Ningún mensaje encontrado</h3>
+        <textarea name="" id="areaDeTexto" cols="30" rows="10" placeholder="Ingresa un mensaje y encripta o desencripta" class="outputTexto"></textarea>
+        <img src="images/pinpng.com-search-icon-png-544943.png" alt="lupa sobre documento" width="80px" id="imagen1">
+        <img src="images/42-search-solid.gif" alt="lupa" style="width: 100px;" id="imagen2">
+        <button onclick="copiar()" class="botones botonesOutput">Copiar</button> 
 
     </div>
+    <script>
+        var introducido = '';
+        var transformado
+        var quitando1= document.getElementById("imagen1")
+        var quitando2= document.getElementById("imagen2")
+        var quitandoArea= document.getElementById("areaDeTexto")
+        var quitandoT= document.getElementById("paraBorrar")
+
+        function scrambler(){
+
+            introducido = document.getElementById("inputA").value;
+            transformado = introducido.replaceAll('e','enter').replaceAll('i', 'imes').replaceAll('a','ai').replaceAll('o','ober').replaceAll('u','ufat')
+
+            document.getElementById("resultado").innerHTML = transformado
+            
+            introducido.value= "";
+            
+
+            if (transformado.length > 1){
+                quitando1.style.visibility="hidden"
+                quitando2.style.visibility="hidden"
+                quitandoArea.placeholder=""
+                quitandoT.innerHTML = ""
+        }
+
+        }
+
+
+        function desEncrypt(){
+
+            introducido = document.getElementById("inputA").value;
+            transformado = introducido.replaceAll('enter','e').replaceAll('imes', 'i').replaceAll('ai','a').replaceAll('ober','o').replaceAll('ufat','u')
+
+            document.getElementById("resultado").innerHTML = transformado
+
+            if (transformado.length > 1){
+                quitando1.style.visibility="hidden"
+                quitando2.style.visibility="hidden"
+                quitandoArea.placeholder=""
+                quitandoT.innerHTML = ""
+        }
+        }
+
+        function copiar(){
+
+            navigator.clipboard.writeText(transformado);
+
+            alert("Texto copiado: " + transformado);
+
+            document.getElementById("inputA").value = "";
+            document.getElementById("resultado").innerHTML = ""
+
+            if (transformado.length > 1){
+                quitando1.style.visibility="visible"
+                quitando2.style.visibility="visible"
+                quitandoArea.placeholder="Ingresa un mensaje"
+                quitandoT.innerHTML = "Ningún mensaje encontrado"
+        }
+
+        }
+
+    </script>
 </body>
 </html>
