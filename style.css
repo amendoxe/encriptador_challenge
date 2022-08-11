@@ -8,6 +8,7 @@
     position: relative;
     top: -30px; 
     margin-bottom: -30px;
+    border-radius: 12px;
 }
 #body{
     background-color: #D8DFE8;
