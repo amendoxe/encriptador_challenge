@@ -2,31 +2,38 @@
     font-family: Inter-Regular;
     src: url(fonts/Inter-Regular.woff);
 }
-#logos{
+html, body {
+    /* max-width: 940px; */
+    height:auto!important;
+ }
+.caja{
+    width: 100%;
+}
+.logos{
     width: 150px;
     /* float:inline-start; */
     position: relative;
-    top: -30px; 
+    top: -20px; 
     margin-bottom: -30px;
     border-radius: 12px;
 }
-#body{
+body{
     background-color: #D8DFE8;
     font-family: Inter-Regular;
 }
-.iputForm{
-    color: darkblue;
+main{
+    clear: right;
+}
+.inputForm{
     display:inline-block;
     width: 47%;
     height: 92%;
-    padding-left: 15%;
-    position: static;
-    vertical-align: top;
-    text-align: center;
-    margin-right: 10px;
+    margin: 10px 20px 20px 10%;
 }
 
 .inputTexto{
+    text-align: center;
+    display: inline-block;
     color: darkblue;
     font-size: 32px;
     background-color: transparent;
@@ -36,6 +43,7 @@
     /* padding-left: 35%; */
     text-align: center;
     resize: none;
+    clear: right;
 
 }
 .botones{
@@ -49,7 +57,7 @@
 background-color: darkblue;
 color: white;
 }
-.botonesInput{
+.inputForm button{
     width: 48%;
     margin-left: 1%;
     padding: .7% 1%;
@@ -62,21 +70,28 @@ color: white;
     color:#67808E;
 }
 .outputForm{
+    display:inline-block;
     background-color: aliceblue;
     width: 300px;
-    height: 500px;
-    display: inline-block;
-    float:inline-end;
-    margin: 2.7%;
+    height: 400px;
+    margin: 10px auto;
     border-radius: 15px;
     vertical-align: top;
     text-align: center;
 }
 
-h3 {
+.outputForm h3 {
     overflow-wrap: break-word;
 }
+#resultado{
+    margin-top: 40px;
+    padding: 5px;
+    font-size: 22px;
+    color: #00008b;
+    font-weight: bold;
+}
 .outputTexto{
+
     color: darkblue;
     font-size: 32px;
     background-color: transparent;
@@ -86,6 +101,7 @@ h3 {
     width: 300px;
     resize: none;
     text-align: center;
+  
 
     /* padding-left: 35%; */
  
@@ -103,4 +119,18 @@ h3 {
 #botonCopiar{
     visibility:hidden;    
 
+}
+footer{
+    background-color: #00008b;
+    width: 100%;
+    height: 120px;
+}
+.linked-gif{
+    width: 32px;
+}
+
+.caja2{
+    text-align: center;
+    padding: 30px;
+    margin: 40px auto 0;
 }
